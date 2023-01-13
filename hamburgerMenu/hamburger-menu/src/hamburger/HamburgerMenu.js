@@ -14,7 +14,7 @@ const transparentBackground = {
 
 const openedHamburgerMenu = {
     position:"fixed",
-    top:"0",
+    top:"0",    
     zIndex:"2",
     color:"white",
     backgroundColor:"black",    
@@ -46,7 +46,7 @@ function HamburgerMenu(props)
                 sideMenuRef.current.style.transform = "translateX(0em)";  
             }
             else{                
-                sideMenuRef.current.style.transform = "translateX(-20em)";
+                sideMenuRef.current.style.transform = "translateX(200vw)";
             }
     },[isOpen])
 
@@ -57,7 +57,7 @@ function HamburgerMenu(props)
             <div
                  ref={sideMenuRef}
                 style={
-                    isOpen ? {right: "0em", ...openedHamburgerMenu} : {right: "-65em", ...openedHamburgerMenu}                    
+                    isOpen ? {right: "0", ...openedHamburgerMenu} : {right: "100vw", ...openedHamburgerMenu}                    
                 }
                  >
                 <button onClick={() => setIsOpen(false)}>Close</button>
