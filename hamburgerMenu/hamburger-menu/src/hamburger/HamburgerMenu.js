@@ -57,7 +57,7 @@ function HamburgerMenu(props)
             <div
                  ref={sideMenuRef}
                 style={
-                    isOpen ? {right: "0em", ...openedHamburgerMenu} : {right: "-50em", ...openedHamburgerMenu}                    
+                    isOpen ? {right: "0em", ...openedHamburgerMenu} : {right: "-65em", ...openedHamburgerMenu}                    
                 }
                  >
                 <button onClick={() => setIsOpen(false)}>Close</button>
