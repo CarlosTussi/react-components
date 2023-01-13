@@ -6,7 +6,7 @@ function App() {
     <>
     <HamburgerMenuProvider>
     <HamburgerMenu>
-        <ul style={{paddingRight:"1em", fontSize: "2rem"}}>
+        <ul style={{fontSize: "1.5rem"}}>
           <li>Item 1</li>
           <li>Item 2</li>
           <li>Item 3</li>

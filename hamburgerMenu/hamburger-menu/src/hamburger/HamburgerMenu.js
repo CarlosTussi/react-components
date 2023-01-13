@@ -22,7 +22,7 @@ const openedHamburgerMenu = {
     transitionDuration: "0.5s",
     transitionTimingFunction:"ease-in-out",
     height: "100%",
-    width: "40%",
+    width: "80%",
 }
 
 const hamburgerContainer = {
@@ -57,7 +57,7 @@ function HamburgerMenu(props)
             <div
                  ref={sideMenuRef}
                 style={
-                    isOpen ? {right: "0em", ...openedHamburgerMenu} : {right: "-60em", ...openedHamburgerMenu}                    
+                    isOpen ? {right: "0em", ...openedHamburgerMenu} : {right: "-50em", ...openedHamburgerMenu}                    
                 }
                  >
                 <button onClick={() => setIsOpen(false)}>Close</button>
