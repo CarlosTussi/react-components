@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react';
+/* 
+IMPORTANT NOTE: Using a real external weather API.
+If this code is failing, it means there is probably a problem  with the API key and not the code itself.
+*/
 
 function App() {
   const [data, setData] = useState({});
