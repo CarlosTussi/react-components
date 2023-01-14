@@ -22,7 +22,7 @@ function App() {
     <>
         {Object.keys(data).length > 0 ? 
         <div>
-          {data.cod === SUCCESS ? 
+          {data.cod == SUCCESS ? 
           <>
             <h1>Status: {data.cod}</h1>
             <h2>Country Code: {data.sys.country}</h2>
