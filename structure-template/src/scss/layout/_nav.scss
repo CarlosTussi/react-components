@@ -1,0 +1,62 @@
+nav{
+    display: grid;
+        
+    grid-template-columns: 1fr;
+    justify-items: end;
+
+}
+
+.mobileNavMenuButton{
+
+    @include breakpoint-up("medium"){
+        display: none;
+    }
+
+    max-width: 4em;
+}
+
+.desktopNav{
+    display: none;
+    @include breakpoint-up("medium"){
+        display: block;        
+    }
+}
+
+.desktopNav ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.transparentBackground {
+    background-color: #333333;
+    opacity: 0.7;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+%openedNavMenu{
+    position: fixed;
+    top: 0;    
+    z-index: 2;
+    color: white;
+    background-color:black;    
+    border-radius:1em 0 0 1em;
+    transition-duration: 0.5s;    
+    transition-timing-function: ease-in-out;
+    height: 100%;
+    width: 80%;
+}
+
+.navMenuOpened {
+    right: 0;
+    @extend %openedNavMenu;
+}
+
+.navMenuClosed {
+    right: 100vw;
+    @extend %openedNavMenu;
+}

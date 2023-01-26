@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+//For Media Query screen size and ABOVE
+//Usage: @include breakpoint-up("medium"){...}   -> For all screen sizes bigger than medium (= mobile not included)
+//"medium"
+//"large"
+//"xlarge"
+@mixin breakpoint-up($screenSize){
+    @media(min-width: map-get($breakpoints-up, $screenSize)){
+        @content;
+    }
+}
+
+//For Media Query screen size and BELOW
+//Usage: @include breakpoint-down("small"){...}   -> For all screen sizes smaller than small (= mobile only)
+//"small"
+//"medium"
+//"large"
+@mixin breakpoint-down($screenSize){
+    @media($max-width: map-get($breakpoints-down, $screenSize)){
+        @content;
+    }
+}
